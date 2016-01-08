@@ -32,6 +32,33 @@
 	    
       <section class="page1">
         <div class="page_container">
+            <div class="img-wrapper">
+                <img id="frame-back" src="img/header-back.png" alt="bike gear by Markus Spiske" data-big="img/header-back-2x.gif" data-big="img/header-back-2x.gif" />
+                <script type="text/javascript">
+    $(document).ready(function()
+    {
+        
+        
+        $("#frame-back").mlens(
+        {
+            imgSrc: $("#frame-back").attr("data-big"),	  // path of the hi-res version of the image
+            imgSrc2x: $("#frame-back").attr("data-big2x"),  // path of the hi-res @2x version of the image
+                                                      //for retina displays (optional)
+            lensShape: "square",                // shape of the lens (circle/square)
+            lensSize: ["40%","35%"],            // lens dimensions (in px or in % with respect to image dimensions)
+                                                // can be different for X and Y dimension
+            borderSize: 0,                  // size of the lens border (in px)
+            borderColor: "#fff",            // color of the lens border (#hex)
+            borderRadius: 0,                // border radius (optional, only if the shape is square)
+            //imgOverlay: $("#frame-back").attr("data-overlay"), // path of the overlay image (optional)
+            //overlayAdapt: false,    // true if the overlay image has to adapt to the lens size (boolean)
+            zoomLevel: 0.7775,          // zoom level multiplicator (number)
+            responsive: true       // true if mlens has to be responsive (boolean)
+        });
+    });
+    </script>
+            </div>
+            <p class="text">frame</p>
   	    </div>
       </section>
 	    
