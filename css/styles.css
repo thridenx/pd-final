@@ -131,7 +131,7 @@ header .text {
 .texto {
     color: white;
     font-family: 'Akzidenz-GroteskBold', Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .texto .italix {
@@ -141,34 +141,29 @@ header .text {
 
 .page2 .texto {
     position: absolute;
-    width: 35%;
+    width: 32%;
     top: 50%;
     left: 5%;
-    color: white;
     z-index: 5000;
 }
 
 .page4 .texto {
-    width: 40%;
+    width: 33%;
     height: 10%;
     display: block;
     position: absolute;
     z-index: 5000;
     margin-top: 20%;
     left: 30%;
-    font-size: 2em;
-    color: white;
 }
 
 .page5 .texto {
-    width: 25%;
+    width: 27%;
     height: 10%;
     display: block;
     position: absolute;
-    margin-top: 30%;
-    left: 70%;
-    font-size: 2em;
-    color: white;
+    margin-top: 22%;
+    left: 68%;
     z-index: 5000;
 }
 
@@ -195,14 +190,12 @@ header .text {
 }
 
 .page7 .texto {
-    width: 35%;
+    width: 33%;
     height: 10%;
     display: block;
     position: absolute;
     margin-top: 10%;
-    left: 4.5%;
-    font-size: 2em;
-    color: white;
+    left: 5%;
     z-index: 5000;
 }
 
@@ -228,14 +221,12 @@ header .text {
 }
 
 .page8 .texto {
-    width: 50%;
+    width: 48%;
     height: 10%;
     display: block;
     position: absolute;
     margin-top: 10%;
     left: 20%;
-    font-size: 2em;
-    color: white;
     z-index: 5000;
 }
 
@@ -312,7 +303,7 @@ section .videocontainer iframe {
 
 #div1 {
     border: 10px solid #ffffff;
-    top: 15%;
+    top: 8%;
     left: 17%;
     width: 60%;
     height: 70%;
