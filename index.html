@@ -1,77 +1,100 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>jQuery One Page Scroll by Pete R. | The Pete Design</title>
-	<meta name="title" content="jQuery One Page Scroll by Pete R. | The Pete Design" />
-	<meta name="description" content="Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin" />
-	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
-	<meta name="author" content="Pete R.">
-	<link rel="canonical" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <meta charset="utf-8">
+    <title>frame</title>
+    <meta name="title" content="jQuery One Page Scroll by Pete R. | The Pete Design" />
+    <meta name="description" content="Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin" />
+    <link rel="shortcut icon" id="favicon" href="favicon.png">
+    <meta name="author" content="Pete R.">
+    <link rel="canonical" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
-<script type="text/javascript" src="js/jquery.mlens-1.6.min.js"></script>
-  <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
-  <link href='css/styles.css' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <script type="text/javascript" src="js/jquery.mlens-1.6.min.js"></script>
+    <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+    <link href='css/styles.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- giflinks -->
+    <script type="text/javascript" src="js/GifLinks.js"></script>
 
-	<script>
-	  $(document).ready(function(){
-      $(".main").onepage_scroll({
-        sectionContainer: "section",
-        responsiveFallback: 200,
-        loop: true
-      });
-		});
-	</script>
+    <script>
+        $(document).ready(function () {
+            $(".main").onepage_scroll({
+                sectionContainer: "section",
+                responsiveFallback: 200,
+                loop: true
+            });
+        });
+    </script>
 </head>
-    
-<body>
-    <header><p class="text">frame</p></header>
-  <div class="wrapper">
-	  <div class="main">
-	    
-      <section class="page1">
-                <div class="img-wrapper">
-                    <img id="back" src="img/gifvertigo.gif">
-                </div>
-      </section>
-	    
-	    <section class="page2">
-            <p class="sentence">é uma imagem</p>
-      </section>
-	    
-	    <section class="page3">
-            <p class="sentence">é clareza</p>
-            
-        </section>
-          
-        <section class="page4">
-            <p class="sentence">é clareza</p>
-            
-        </section>
-          
-          
-          
-          <section class="page5">
-              <p class="sentence">é enquadramento</p>
-              <div class="img-wrapper"><img id="back" src="img/pulp-fiction.gif">
-              </div>
-      </section>
-          <section class="page6">
-                <p class="sentence">é enquadramento</p>
 
+<body>
+    <header>
+        <p class="text">frame</p>
+    </header>
+    <div class="wrapper">
+        <div class="main">
+
+            <section class="page1">
+                <div class="img-wrapper">
+                    <video id="back" autoplay loop muted src="http://i.imgur.com/aX7wmye.webm"></video>
+                </div>
+            </section>
+
+            <section class="page2">
+                <p class="sentence">é uma imagem</p>
+            </section>
+
+            <section class="page3">
+                <p class="sentence">é clareza</p>
+
+            </section>
+
+            <section class="page4">
+                <p class="sentence">é clareza</p>
+
+            </section>
+
+            <section class="page5">
+                <p class="sentence">é enquadramento</p>
+                <div class="img-wrapper">
+                    <video id="back" autoplay loop muted src="http://i.imgur.com/x8Mx2ly.webm"></video>
+                </div>
+            </section>
+
+            <section class="page6">
+                <p class="sentence">é enquadramento</p>
                 <div class="container">
                     <div id="div1">
                         <div class="frame">frame</div>
                     </div>
                 </div>
-
-                <div class="img-wrapper">
-                    <img id="back" src="img/psycho.png">
+                <div class="img-enquadramento">
+                    <img id="back" src="img/psycho.png" />
                 </div>
+                <!--- TEMPORIZADOR DAS IMAGENS --->
+                <script type="text/javascript">
+                    var images = [];
+                    images[0] = "img/psycho.png";
+                    images[1] = "img/kynodontas.png";
+                    images[2] = "img/louvre.png";
+                    images[3] = "img/comediadeus.png";
 
+                    var i = 0;
+                    setInterval(fadeDivs, 5000);
+
+                    function fadeDivs() {
+                        i = i < images.length ? i : 0;
+                        console.log(i)
+                        $('.img-enquadramento img').fadeOut(0, function () {
+                            $(this).attr('src', images[i]).fadeIn(0);
+                        })
+                        i++;
+                    }
+                </script>
+                <!--- QUADRADO --->
                 <script type="text/javascript">
                     $("#div1").resizable({
                         maxHeight: 550,
@@ -81,15 +104,14 @@
                         animate: true,
                         handles: "nw, ne, sw, se"
                     });
-
                     $("#div1").draggable({
                         stack: ".div1",
                         containment: '.container'
                     });
                 </script>
             </section>
-          
-    <section class="page7">
+
+            <section class="page7">
                 <p class="sentence">é tempo</p>
 
                 <div class="img-wrapper">
@@ -117,57 +139,88 @@
                     </script>
                 </div>
             </section>
-          
-    <section class="page8">
+
+            <section class="page8">
                 <p class="sentence">é movimento</p>
-      </section>
-          
-    <section class="page9">
-        <div class="videocontainer">
-            <div class="row top">
-                <iframe class="right" src="https://player.vimeo.com/video/151176446" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <iframe src="https://player.vimeo.com/video/151176447" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <div class="row">
-                <iframe class="right" src="https://player.vimeo.com/video/151178976" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                
-                
-                <iframe src="https://player.vimeo.com/video/144987940" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
+
+                <p class="sentence">
+                    <br>
+                    <a data-src="http://i.imgur.com/E1RYc4Y.gif">pulp fiction</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/DOgAv5u.gif">les quatre cents coups</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/bGOlcHl.gif">eternal sunshine of the spotless mind</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/qz2k4x1.gif">gummo</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/NGANyhk.gif">the shining</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/5to35Ne.gif">pierrot le fou</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/oxSYbh8.gif">fear and loathing in las vegas</a>
+                    <br>
+                    <a data-src="http://i.imgur.com/H9xpofE.gif">the truman show</a>
+                </p>
+
+                <div class="img-wrapper">
+                    <img id="back" src="http://i.imgur.com/HPwVCHY.gif">
+                </div>
+
+                <script>
+                    var elements = document.querySelectorAll('section a');
+                    GifLinks(elements);
+                </script>
+
+            </section>
+
+            <section class="page9">
+                <div class="videocontainer">
+                    <div class="row top">
+                        <iframe class="right" src="https://player.vimeo.com/video/151176446" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/151176447" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <iframe class="right" src="https://player.vimeo.com/video/151178976" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+                        <iframe src="https://player.vimeo.com/video/144987940" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="details">
+                    <p>separadores identitários</p>
+                </div>
+            </section>
+
+            <section class="page10">
+                <div class="videocontainer">
+                    <div class="row top">
+                        <iframe class="right" src="https://player.vimeo.com/video/151178878" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/151176782" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <div class="row">
+                        <iframe class="right" src="https://player.vimeo.com/video/151177300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+                        <iframe src="https://player.vimeo.com/video/151177709" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="details">
+                    <p>separadores programáticos</p>
+                </div>
+            </section>
+            <section class="page11">
+                <div class="videocontainer">
+
+                    <iframe src="https://www.youtube.com/embed/-3MeL8HutcE" frameborder="0"></iframe>
+                </div>
+                <div class="details">
+                    <p>Diana Ferreira, Raquel Simões e Sérgio Ferreira</p>
+                    <p>Universidade de Coimbra, 2016</p>
+                </div>
+            </section>
         </div>
-        <div class="details">
-            <p>separadores identitários</p>
-        </div>
-      </section>	    
-          
-    <section class="page10">
-        <div class="videocontainer">
-            <div class="row top">
-                <iframe class="right" src="https://player.vimeo.com/video/151178878" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <iframe src="https://player.vimeo.com/video/151176782" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-            <div class="row">
-                <iframe class="right" src="https://player.vimeo.com/video/151177300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                
-                
-                <iframe src="https://player.vimeo.com/video/151177709" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="details">
-            <p>separadores programáticos</p>
-        </div>
-      </section>
-    <section class="page11">
-        <div class="videocontainer">
-            
-            <iframe src="https://www.youtube.com/embed/-3MeL8HutcE" frameborder="0"></iframe>
-        </div>
-        <div class="details">
-            <p>Diana Ferreira, Raquel Simões e Sérgio Ferreira</p>
-            <p>Universidade de Coimbra, 2016</p>
-        </div>
-      </section>
     </div>
-  </div>
+
 </body>
+
 </html>

@@ -9,31 +9,28 @@
 
 header .text {
     cursor: none;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     display: block;
     position: absolute;
-    margin-top:  20%;
+    margin-top: 20%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
-    font-size:9em;
+    font-size: 9em;
     color: white;
-
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    
-    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    transition:width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out, font-size 300ms ease-in-out, margin-left 300ms ease-in-out, margin-right 300ms ease-in-out;
+    -webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
+    -moz-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
+    -o-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
+    transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out, font-size 300ms ease-in-out, margin-left 300ms ease-in-out, margin-right 300ms ease-in-out;
 }
-
 
 .viewing-page-2 header .text,
 .viewing-page-3 header .text,
@@ -41,44 +38,40 @@ header .text {
 .viewing-page-5 header .text,
 .viewing-page-6 header .text,
 .viewing-page-7 header .text,
-.viewing-page-8 header .text
-{
-    width:20%;
-    height:10%;
+.viewing-page-8 header .text {
+    width: 20%;
+    height: 10%;
     margin-top: 2%;
     font-size: 3em;
     margin-left: 0;
 }
 
-
 .viewing-page-9 header .text,
 .viewing-page-10 header .text,
 .viewing-page-11 header .text {
-    width:5%;
-    height:5%;
+    width: 5%;
+    height: 5%;
     margin-top: 45%;
     font-size: 1.5em;
     margin-left: 47.5%;
 }
 
-
 .page2 {
     background-color: #3d6060;
 }
 
-.sentence
-{
-    width:80%;
-    height:10%;
+.sentence {
+    width: 80%;
+    height: 10%;
     display: block;
     position: absolute;
     margin-top: 2%;
     left: 20%;
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
-    font-size:3em;
+    font-size: 3em;
     color: white;
+    z-index: 5000;
 }
-
 
 .page6 .container {
     margin-top: 8%;
@@ -90,74 +83,77 @@ header .text {
     width: 90%;
 }
 
-
-
 .page7 .img-wrapper {
     display: block;
     position: fixed;
     margin: auto;
-    left:0;
+    left: 0;
     overflow: hidden;
     height: 100vh;
 }
 
-.img-wrapper #frame-back {    
-    height:100%;
+.img-wrapper #frame-back {
+    height: 100%;
 }
-.img-wrapper #back {    
-    width:100%;
+
+.img-wrapper #back {
+    width: 101%;
+}
+
+.img-enquadramento #back {
+    width: 101%;
 }
 
 section .videocontainer {
-    
     margin-top: 5%;
     height: 70%;
-    width:100%;
+    width: 100%;
 }
 
 section .videocontainer .row {
     height: 50%;
-    width:60%;
+    width: 60%;
     margin-left: 20%;
 }
 
 section .videocontainer .row.top {
     margin-bottom: 1%;
 }
-section .videocontainer .row .right{
-    
+
+section .videocontainer .row .right {
     margin-right: 2%;
 }
 
 section .videocontainer iframe {
-    
     width: 48%;
     height: 100%;
     display: inline;
 }
 
-.page9, .page10, .page11 {
+.page9,
+.page10,
+.page11 {
     background-color: black;
 }
- .page11 .videocontainer iframe {
-    height:100%;
-    width:60%;
+
+.page11 .videocontainer iframe {
+    height: 100%;
+    width: 60%;
     margin-left: 20%;
 }
 
- .details {
-    width:100%;
-    color:white;
+.details {
+    width: 100%;
+    color: white;
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
     font-size: 0.7em;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .page11 .details p {
     line-height: 0.8em;
 }
-
 
 #div1 {
     border: 10px solid #ffffff;
