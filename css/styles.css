@@ -3,8 +3,35 @@
     src: url('../fonts/AkzidenzGrotesk-Super.otf');
 }
 
-.page1 {
-    background-color: #b466ba;
+@font-face {
+    font-family: 'Akzidenz-GroteskSuperItalic';
+    src: url('../fonts/AkzidenzGrotesk-SuperItalic.otf');
+}
+
+@font-face {
+    font-family: 'Akzidenz-GroteskBold';
+    src: url('../fonts/AkzidenzGrotesk-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Akzidenz-GroteskBoldItalic';
+    src: url('../fonts/AkzidenzGrotesk-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'Akzidenz-GroteskMedium';
+    src: url('../fonts/AkzidenzGrotesk-Medium.otf');
+}
+
+@font-face {
+    font-family: 'Akzidenz-GroteskMediumItalic';
+    src: url('../fonts/AkzidenzGrotesk-MediumItalic.otf');
+}
+
+
+
+section {
+    background-color: black;
 }
 
 header .text {
@@ -62,9 +89,6 @@ header .text {
 }
 
 
-.page2 {
-    background-color: #3d6060;
-}
 
 .sentence
 {
@@ -77,8 +101,29 @@ header .text {
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
     font-size:3em;
     color: white;
+    z-index:5000;
 }
 
+.texto {
+    color:white;
+    font-family: 'Akzidenz-GroteskBold', Helvetica, Arial, sans-serif;
+    font-size: 2em;
+}
+
+.texto .italix {
+    font-family: 'Akzidenz-GroteskBoldItalic', Helvetica, Arial, sans-serif;
+    
+    font-size: 2em;
+}
+
+.page2 .texto {
+    position: absolute;
+    width:35%;
+    top: 50%;
+    left: 5%;
+    color: white;
+    z-index:5000;
+}
 
 .page6 .container {
     margin-top: 8%;
@@ -136,9 +181,6 @@ section .videocontainer iframe {
     display: inline;
 }
 
-.page9, .page10, .page11 {
-    background-color: black;
-}
  .page11 .videocontainer iframe {
     height:100%;
     width:60%;
@@ -151,7 +193,7 @@ section .videocontainer iframe {
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
     font-size: 0.7em;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .page11 .details p {
@@ -171,10 +213,6 @@ section .videocontainer iframe {
     width: 15px;
     height: 15px;
     background-image: none;
-    /*
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    */
 }
 
 .ui-resizable-nw {
