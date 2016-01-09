@@ -51,15 +51,14 @@ header .text {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    -moz-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    -o-transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out;
-    transition: width 300ms ease-in-out, height 300ms ease-in-out, margin-top 300ms ease-in-out, font-size 300ms ease-in-out, margin-left 300ms ease-in-out, margin-right 300ms ease-in-out;
+    -webkit-transition: width 1s ease-in-out, height 1s ease-in-out, margin-top 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out, height 1s ease-in-out, margin-top 1s ease-in-out;
+    -o-transition: width 1s ease-in-out, height 1s ease-in-out, margin-top 1s ease-in-out;
+    transition: width 1s ease-in-out, height 1s ease-in-out, margin-top 1s ease-in-out, font-size 1s ease-in-out, margin-left 1s ease-in-out, margin-right 1s ease-in-out;
 }
 
 .viewing-page-2 header .text,
 .viewing-page-3 header .text,
-.viewing-page-4 header .text,
 .viewing-page-5 header .text,
 .viewing-page-6 header .text,
 .viewing-page-7 header .text,
@@ -71,6 +70,14 @@ header .text {
     margin-left: 0;
 }
 
+.viewing-page-4 header .text {
+     width:20%;
+     height:10%;
+     margin-top: -102%;
+     font-size: 3em;
+     margin-left: 0;
+ }
+
 .viewing-page-9 header .text,
 .viewing-page-10 header .text,
 .viewing-page-11 header .text {
@@ -80,6 +87,34 @@ header .text {
     font-size: 1.5em;
     margin-left: 47.5%;
 }
+
+.page4 .img-wrapper #back4 {
+     height:100%;!important
+     top:-10%;
+ }
+ 
+ @keyframes positionchange {
+   0%, 24.9% {top: 5%;left:5%;}
+   25%, 49.9% {top: 85%;left:5%;}
+     50%, 74.9%  {top: 85%;left:75%;}
+    75%, 99.9% {top: 5%;left:75%;}
+ }
+ 
+ 
+ .page4 .logo {
+     position: absolute;
+     top: 5%;
+     left:5%;
+     height:9%;
+     width:20%;
+     z-index: 5000;
+     text-align: center;
+     animation: positionchange 20s infinite;
+ }
+ 
+ 
+ 
+ .logo img { height:100%; }
 
 .sentence {
     width: 80%;
@@ -119,11 +154,11 @@ header .text {
     height: 10%;
     display: block;
     position: absolute;
+    z-index: 5000;
     margin-top: 20%;
     left: 30%;
     font-size: 2em;
     color: white;
-    z-index: 5000;
 }
 
 .page5 .texto {
@@ -332,3 +367,47 @@ section .videocontainer iframe {
     color: white;
     font-size: 2em;
 }
+
+
+ 
+ @keyframes textchange {
+   0% {
+     content: "simples";
+   }
+     25% {
+         content:"dinâmico";
+     }
+     
+   50% {
+     content:"eficaz";
+   }
+     
+     75% {
+         content:"direto";
+     }
+   100% {
+     content: "compreensível";
+   }
+ }
+ 
+ .text-changer {
+ 
+     cursor: none;
+     width:100%;
+     height:100%;
+     display: block;
+     position: absolute;
+     margin-top:  20%;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
+     font-size:9em;
+     color: white;
+ 
+ }
+ 
+ .text-changer:after {
+   animation: textchange 8s linear infinite alternate;
+     content:"limpa";
+ }
