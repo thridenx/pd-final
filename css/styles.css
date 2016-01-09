@@ -89,8 +89,7 @@ header .text {
 }
 
 .page4 .img-wrapper #back4 {
-     height:100%;!important
-     top:-10%;
+     width:100%;!important
  }
  
  @keyframes positionchange {
@@ -166,7 +165,7 @@ header .text {
     height: 10%;
     display: block;
     position: absolute;
-    margin-top: 10%;
+    margin-top: 30%;
     left: 70%;
     font-size: 2em;
     color: white;
@@ -375,7 +374,7 @@ section .videocontainer iframe {
      content: "simples";
    }
      25% {
-         content:"dinâmico";
+         content:"dinâmica";
      }
      
    50% {
@@ -383,7 +382,7 @@ section .videocontainer iframe {
    }
      
      75% {
-         content:"direto";
+         content:"direta";
      }
    100% {
      content: "compreensível";
