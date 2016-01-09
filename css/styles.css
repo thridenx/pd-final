@@ -133,6 +133,32 @@ header .text {
     height: 100vh;
 }
 
+.page8 .texto {
+    width: 50%;
+    height: 10%;
+    display: block;
+    position: absolute;
+    margin-top: 10%;
+    left: 20%;
+    font-size: 2em;
+    color: white;
+    z-index: 5000;
+}
+
+.page8 .cinemagraphs {
+    width: 80%;
+    height: 10%;
+    display: block;
+    position: absolute;
+    margin-top: 10%;
+    left: 20%;
+    font-family: 'Akzidenz-GroteskBold', Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    z-index: 5000;
+    text-decoration: underline;
+}
+
 .img-wrapper #frame-back {
     height: 100%;
 }
