@@ -61,28 +61,47 @@ header .text {
     width:80%;
     height:10%;
     display: block;
-    position: relative;
+    position: absolute;
     margin-top: 2%;
     left: 20%;
     font-family: 'Akzidenz-GroteskSuper', Helvetica, Arial, sans-serif;
     font-size:3em;
     color: white;
+    z-index: 10;
+
 }
 
 .page3 {
     background-color: aqua;
 } 
+.page6 {
+    background-color: blue;
+} 
+.page7 {
+    background-color: purple;
+}
+.page8 {
+    background-color: pink;
+}
+.page9 {
+    background-color: yellow;
+}
 
 
-.page7 .img-wrapper {
+.page6 .img-wrapper {
     display: block;
     position: fixed;
     margin: auto;
     left:0;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 }
 
 .img-wrapper #frame-back {    
     height:100%;
+}
+
+#background-img{
+    width: 101%;
+
 }
