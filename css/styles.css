@@ -150,7 +150,10 @@ header .text {
     height:100%;
 }
 .img-wrapper #back {    
-    width:100%;
+    width:101%;
+}
+.img-enquadramento #back {    
+    width:101%;
 }
 
 section .videocontainer {
