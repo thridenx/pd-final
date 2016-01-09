@@ -9,6 +9,7 @@
 	<meta name="author" content="Pete R.">
 	<link rel="canonical" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
 <script type="text/javascript" src="js/jquery.mlens-1.6.min.js"></script>
   <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
@@ -32,70 +33,96 @@
 	  <div class="main">
 	    
       <section class="page1">
-        <div class="page_container">
-  	    </div>
+                <div class="img-wrapper">
+                    <img id="back" src="img/gifvertigo.gif">
+                </div>
       </section>
 	    
 	    <section class="page2">
             <p class="sentence">é uma imagem</p>
-	      <div class="page_container">
-	      </div>
       </section>
 	    
 	    <section class="page3">
             <p class="sentence">é clareza</p>
             
         </section>
-          <section class="page4">
-              
-              <p class="sentence">é a tua mãe</p>
-	      <div class="page_container">
-  	    </div>
-      </section>
           
-    <section class="page5">
-	      <div class="page_container">
-  	    </div>
-      </section>
+        <section class="page4">
+            <p class="sentence">é clareza</p>
+            
+        </section>
           
-    <section class="page6">
-	      <div class="page_container">
-  	    </div>
+          
+          
+          <section class="page5">
+              <p class="sentence">é enquadramento</p>
+              <div class="img-wrapper"><img id="back" src="img/pulp-fiction.gif">
+              </div>
       </section>
+          <section class="page6">
+                <p class="sentence">é enquadramento</p>
+
+                <div class="container">
+                    <div id="div1">
+                        <div class="frame">frame</div>
+                    </div>
+                </div>
+
+                <div class="img-wrapper">
+                    <img id="back" src="img/psycho.png">
+                </div>
+
+                <script type="text/javascript">
+                    $("#div1").resizable({
+                        maxHeight: 550,
+                        maxWidth: 1000,
+                        minHeight: 150,
+                        minWidth: 200,
+                        animate: true,
+                        handles: "nw, ne, sw, se"
+                    });
+
+                    $("#div1").draggable({
+                        stack: ".div1",
+                        containment: '.container'
+                    });
+                </script>
+            </section>
           
     <section class="page7">
-	      <div class="page_container">
-              
-            <div class="img-wrapper">
-                <img id="frame-back" src="img/header-back.png" alt="bike gear by Markus Spiske" data-big="img/header-back-2x.gif" data-big="img/header-back-2x.gif" />
-                <script type="text/javascript">
-    $(document).ready(function()
-    {
-        
-        
-        $("#frame-back").mlens(
-        {
-            imgSrc: $("#frame-back").attr("data-big"),	  // path of the hi-res version of the image
-            imgSrc2x: $("#frame-back").attr("data-big2x"),  // path of the hi-res @2x version of the image
-                                                      //for retina displays (optional)
-            lensShape: "square",                // shape of the lens (circle/square)
-            lensSize: ["40%","35%"],            // lens dimensions (in px or in % with respect to image dimensions)
-                                                // can be different for X and Y dimension
-            borderSize: 0,                  // size of the lens border (in px)
-            borderColor: "#fff",            // color of the lens border (#hex)
-            borderRadius: 0,                // border radius (optional, only if the shape is square)
-            //imgOverlay: $("#frame-back").attr("data-overlay"), // path of the overlay image (optional)
-            //overlayAdapt: false,    // true if the overlay image has to adapt to the lens size (boolean)
-            zoomLevel: 0.7775,          // zoom level multiplicator (number)
-            responsive: true       // true if mlens has to be responsive (boolean)
-        });
-    });
-    </script>
-            </div>
-  	    </div>
-      </section>
+                <p class="sentence">é tempo</p>
+
+                <div class="img-wrapper">
+                    <img id="frame-back" src="img/header-back.png" data-big="img/header-back-2x.gif" data-big="img/header-back-2x.gif" />
+
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+
+                            $("#frame-back").mlens({
+                                imgSrc: $("#frame-back").attr("data-big"), // path of the hi-res version of the image
+                                imgSrc2x: $("#frame-back").attr("data-big2x"), // path of the hi-res @2x version of the image
+                                //for retina displays (optional)
+                                lensShape: "square", // shape of the lens (circle/square)
+                                lensSize: ["40%", "35%"], // lens dimensions (in px or in % with respect to image dimensions)
+                                // can be different for X and Y dimension
+                                borderSize: 0, // size of the lens border (in px)
+                                borderColor: "#fff", // color of the lens border (#hex)
+                                borderRadius: 0, // border radius (optional, only if the shape is square)
+                                //imgOverlay: $("#frame-back").attr("data-overlay"), // path of the overlay image (optional)
+                                //overlayAdapt: false,    // true if the overlay image has to adapt to the lens size (boolean)
+                                zoomLevel: 0.7775, // zoom level multiplicator (number)
+                                responsive: true // true if mlens has to be responsive (boolean)
+                            });
+                        });
+                    </script>
+                </div>
+            </section>
           
     <section class="page8">
+                <p class="sentence">é movimento</p>
+      </section>
+          
+    <section class="page9">
         <div class="videocontainer">
             <div class="row top">
                 <iframe class="right" src="https://player.vimeo.com/video/151176446" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -113,7 +140,7 @@
         </div>
       </section>	    
           
-    <section class="page9">
+    <section class="page10">
         <div class="videocontainer">
             <div class="row top">
                 <iframe class="right" src="https://player.vimeo.com/video/151178878" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -130,7 +157,7 @@
             <p>separadores programáticos</p>
         </div>
       </section>
-    <section class="page10">
+    <section class="page11">
         <div class="videocontainer">
             
             <iframe src="https://www.youtube.com/embed/-3MeL8HutcE" frameborder="0"></iframe>
